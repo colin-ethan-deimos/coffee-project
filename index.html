@@ -1,34 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Big Bad Coffee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <div class="jumbotron jumbotron-fluid py-2 bg-accent">
+        <div class="container">
+            <h1 class="display-4">Coffee!</h1>
+            <p class="lead">Welcome to the best coffee this side of the Mississippi.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8" id="coffee-card-area">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+            </div>
+        <div class="col-4">
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+            <div class="dropdown justify-content-center d-flex">
+                <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Roast
+                </button>
+                <div class="dropdown-menu p-0 w-100" aria-labelledby="dropdownMenuButton">
+                    <button class="btn mt-0 w-100 bg-soft-white" onclick="specifyRoast('light')">Light</button>
+                    <button class="btn mt-0 w-100 bg-soft-white" onclick="specifyRoast('medium')">Medium</button>
+                    <button class="btn mt-0 w-100 bg-soft-white" onclick="specifyRoast('dark')">Dark</button>
+                    <button class="btn mt-0 w-100 bg-soft-white" onclick="specifyRoast('all')">View all options</button>
+                </div>
+            </div>
+            <br>
+            <div class="card border-0 w-100" style="width: 18rem;">
+                <div class="card-header text-center border-0 bg-accent">
+                    Search by name
+                </div>
+                <div class="input-group border-0">
+                    <input type="text" class="form-control border-0 bg-soft-white" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="searchTerm">
+                </div>
+            </div>
+            <div class="card mt-4 mx-auto mb-2  border-dark-shade d-flex justify-content-center " style="width: 80%;">
+                                  <div class="card-body bg-soft-white ">
+                                      <div class="input-group border-0">
+                                          <input type="text" placeholder= "Enter Name Here" id = "enteredName" class="mb-3 form-control border-0 bg-soft-white text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" >
+                                      </div>
+                                      <div class="btn-group mr-2 card-subtitle mb-2 d-flex justify-content-between" role="group" aria-label="First group">
+                                          <button type="button" class="btn btn-secondary roastSelector border-0" value="light">light</button>
+                                          <button type="button" class="btn btn-secondary roastSelector border-0" value="medium">medium</button>
+                                          <button type="button" class="btn btn-secondary roastSelector border-0" value="dark">dark</button>
+                                      </div>
+                                      <div class="input-group border-0 my-3">
+                                          <input type="text" placeholder="Enter a brief description" id ="roastDescription" maxlength="30" class="form-control border-0 bg-soft-white text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" >
+                                      </div>
+                                            <button type="button" class="btn btn-outline-primary mx-auto w-100" id="submitCoffee" onclick="addCoffee()">Submit Coffee</button>
+                                        </div>
+                                </div>
+<!--            <div>Search by name </div>-->
+<!--            <div class="input-group mb-3">-->
+<!--                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="searchTerm">-->
+<!--            </div>-->
+<!--        </div>-->
 
+        </div>
+
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>ID</th>-->
+<!--                <th>NAME</th>-->
+<!--                <th>ROAST</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="coffees"></tbody>-->
+<!--    </table>-->
+
+
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
