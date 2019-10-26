@@ -1,5 +1,4 @@
 :root{
-
     --soft-white:#f2d6ba;
     --accent:#cbac8c;
     --background:#efc293;
@@ -7,14 +6,11 @@
     --dark-accent:#bb5d3b;
     --light-accent:#e0a247;
     --jumbo-color:#B89553;
-
-}
-.webbyText{
-    font-family: Halloweb, serif;
 }
 
-.spookyText{
-    font-family: 'Shadows Into Light', cursive;
+@font-face {
+    font-family: Halloweb;
+    src: url("Halloweb-Display.otf") format('opentype');
 }
 
 body{
@@ -31,15 +27,18 @@ td, th {
     padding: 5px 10px;
 }
 
+.webbyText{
+    font-family: Halloweb, serif;
+}
+
+.spookyText{
+    font-family: 'Shadows Into Light', cursive;
+}
+
 .bg-jumbo{
     background-color: var(--jumbo-color);
 }
 
-.jumbogif{
-    float: right;
-    width: 150px;
-    height: 150px;
-}
 
 .bg-soft-white{
     background-color: var(--soft-white);
@@ -74,30 +73,25 @@ td, th {
     color: var(--dark-accent);
 }
 
-.right10{
-    right : 70px;
+.dropdown-menu .btn:hover{
+    background-color: var(--light-accent)!important;
+}
+
+.jumbopic{
+    float: right;
+    width: 150px;
+    height: 150px;
 }
 
 .dropdown-menu .btn:not(:last-of-type){
     border-bottom: 1px solid black;
 }
+
 .dropdown-menu .btn {
     border-radius: 0;
 }
 .dropdown-menu{
     box-shadow: 0 0 3pt 2pt var(--dark-accent);
-}
-
-.dropdown-menu .btn:hover{
-    background-color: var(--light-accent)!important;
-}
-
-.right50{
-    right:50px;
-}
-
-.w134{
-    width:134px;
 }
 
 .dropdown-menu.show {
@@ -112,11 +106,6 @@ td, th {
 
  }
 
-.no-radius-top {
-    border-top-right-radius: 0 !important;
-    border-top-left-radius: 0 !important;
-
-}
 
 .form-control:focus{
     outline: none !important;
@@ -124,6 +113,12 @@ td, th {
     border-bottom-left-radius: .25em;
     box-shadow: 0 0 3pt 2pt var(--dark-accent);
     background-color: var(--soft-white);
+}
+
+.no-radius-top {
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+
 }
 
 .btn:focus{
@@ -136,26 +131,8 @@ td, th {
     border: 0;
 }
 
-.sizeHalf{
-    font-size: 1.5em;
-}
-
 .floatLeft{
     float: left;
 }
 
-.roastSelector:hover{
-    border: 0;
-}
 
-.roastSelector:hover:focus {
-    box-shadow: 0 0 3pt 2pt var(--light-accent)!important;
-    background-color: var(--light-accent)!important;
-
-
-}
-
-@font-face {
-    font-family: Halloweb;
-    src: url("Halloweb-Display.otf") format('opentype');
-}
