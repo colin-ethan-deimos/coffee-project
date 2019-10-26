@@ -7,14 +7,18 @@
     <title>Big Bad Coffee</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid py-2 bg-accent">
-        <div class="container">
-            <h1 class="display-4">Coffee!</h1>
-            <p class="lead">Welcome to the best coffee this side of the Mississippi.</p>
+    <div class="jumbotron jumbotron-fluid py-2 bg-jumbo d-flex">
+        <div class="container-fluid ml-5 pl-5 w-100 h-50">
+            <h1 class="display-4 webbyText doubleSized">The Coffee Coffin</h1>
+            <h2 class="mt-3 webbyText">The best (and last) coffee you'll ever have!</h2>
         </div>
+        <br>
+        <img src="f83920aff7155a9eccf31262549f6d3b%20copy.png" alt="" class="jumbogif mr-5">
+        <img src="giphy.gif" alt="spooky coffee" class="jumbogif mr-5">
     </div>
     <div class="container">
         <div class="row">
@@ -40,50 +44,38 @@
                     Search by name
                 </div>
                 <div class="input-group border-0">
-                    <input type="text" class="form-control border-0 bg-soft-white" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="searchTerm">
+                    <input type="text" class="form-control border-0 bg-soft-white no-radius-top" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="searchTerm">
                 </div>
             </div>
             <div class="card mt-4 mx-auto mb-2  border-dark-shade d-flex justify-content-center " style="width: 80%;">
+                <div class="card-header bg-dark-accent text-center border-0 no-radius-top"><h4>Add Coffee</h4></div>
+                                      <form class="needs-validation" novalidate>
                                   <div class="card-body bg-soft-white ">
                                       <div class="input-group border-0">
-                                          <input type="text" placeholder= "Enter Name Here" id = "enteredName" class="mb-3 form-control border-0 bg-soft-white text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" >
+                                          <input type="text" placeholder= "Enter Name Here" id = "enteredName" class="mb-3 form-control border-0 bg-soft-white text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
                                       </div>
-                                      <div class="btn-group mr-2 card-subtitle mb-2 d-flex justify-content-between" role="group" aria-label="First group">
-                                          <button type="button" class="btn btn-secondary roastSelector border-0" value="light">light</button>
-                                          <button type="button" class="btn btn-secondary roastSelector border-0" value="medium">medium</button>
-                                          <button type="button" class="btn btn-secondary roastSelector border-0" value="dark">dark</button>
-                                      </div>
+                                          <select class="custom-select" id="roastSelect" required>
+                                              <option value="" class="is-invalid" id="invalidRoast">Select type of Roast</option>
+                                              <option value="light">light</option>
+                                              <option value="medium">medium</option>
+                                              <option value="dark">dark</option>
+                                          </select>
                                       <div class="input-group border-0 my-3">
-                                          <input type="text" placeholder="Enter a brief description" id ="roastDescription" maxlength="30" class="form-control border-0 bg-soft-white text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" >
+                                          <input type="text" placeholder="Enter a brief description" id ="roastDescription" maxlength="30" class="form-control border-0 bg-soft-white text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
                                       </div>
-                                            <button type="button" class="btn btn-outline-primary mx-auto w-100" id="submitCoffee" onclick="addCoffee()">Submit Coffee</button>
+                                            <button type="button" class="btn btn-outline-primary mx-auto w-100" id="submitCoffee">Submit Coffee</button>
                                         </div>
+
+                                      </form>
                                 </div>
-<!--            <div>Search by name </div>-->
-<!--            <div class="input-group mb-3">-->
-<!--                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="searchTerm">-->
-<!--            </div>-->
-<!--        </div>-->
-
+            <button type="button" class="btn btn-outline-primary mx-auto w-100" onclick="clearCoffees()">Reset Coffees</button>
         </div>
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
-
-
     </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+
 </body>
 </html>

@@ -6,7 +6,15 @@
     --dark-shade:#975a4b;
     --dark-accent:#bb5d3b;
     --light-accent:#e0a247;
+    --jumbo-color:#B89553;
 
+}
+.webbyText{
+    font-family: Halloweb, serif;
+}
+
+.spookyText{
+    font-family: 'Shadows Into Light', cursive;
 }
 
 body{
@@ -21,6 +29,16 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+.bg-jumbo{
+    background-color: var(--jumbo-color);
+}
+
+.jumbogif{
+    float: right;
+    width: 150px;
+    height: 150px;
 }
 
 .bg-soft-white{
@@ -56,6 +74,10 @@ td, th {
     color: var(--dark-accent);
 }
 
+.right10{
+    right : 70px;
+}
+
 .dropdown-menu .btn:not(:last-of-type){
     border-bottom: 1px solid black;
 }
@@ -85,6 +107,12 @@ td, th {
 }
 
 .form-control:nth-of-type(n1) {
+     border-top-right-radius: 0 !important;
+     border-top-left-radius: 0 !important;
+
+ }
+
+.no-radius-top {
     border-top-right-radius: 0 !important;
     border-top-left-radius: 0 !important;
 
@@ -98,10 +126,22 @@ td, th {
     background-color: var(--soft-white);
 }
 
-.roastSelector:focus{
-    box-shadow: 0 0 3pt 2pt var(--light-accent);
-    background-color: var(--light-accent);
+.btn:focus{
+    box-shadow: none;
     border: 0;
+}
+
+.btn:active{
+    box-shadow: none!important;
+    border: 0;
+}
+
+.sizeHalf{
+    font-size: 1.5em;
+}
+
+.floatLeft{
+    float: left;
 }
 
 .roastSelector:hover{
@@ -113,4 +153,9 @@ td, th {
     background-color: var(--light-accent)!important;
 
 
+}
+
+@font-face {
+    font-family: Halloweb;
+    src: url("Halloweb-Display.otf") format('opentype');
 }
