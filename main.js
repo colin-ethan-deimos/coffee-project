@@ -133,16 +133,7 @@ function clearCoffees(){
     storageArr = [];
     localStorage.clear();
     cardArea.innerHTML = "";
-    for(let x = 0; x<orginalCoffeeLength;x++){
-        cardArea.innerHTML += '<div class="card float-left mx-3 mb-2  border-dark-shade" style="width: 40%;">\n' +
-            '                    <div class="card-body bg-soft-white ">\n' +
-            '                        <h4 class="card-title text-center spookyText">' + coffees[x].name + '</h4>\n' +
-            '                        <h6 class="card-subtitle mb-2 text-muted text-center">' + coffees[x].roast + '</h6>\n' +
-            '                        <p class="card-text text-center">'+ coffees[x].description +'</p>\n' +
-            '                        <button type="button" class="btn btn-outline-primary mx-auto w-100">Buy Now!</button>\n' +
-            '                    </div>\n' +
-            '                </div>'
-    }
+    location.reload();
 }
 
 // This function is used to add a coffee to the coffee array and to also add it to the local storage at the same time
@@ -153,9 +144,9 @@ function addCoffee(){
     }
     let coffee = {
         id: coffees.length + 1,
-        name: document.getElementById("enteredName").value,
+        name: document.getElementById("enteredName").value.trim(),
         roast: roastButton,
-        description: document.getElementById("roastDescription").value
+        description: document.getElementById("roastDescription").value.trim()
     };
     coffees.push(coffee);
     document.getElementById("enteredName").value = '';
