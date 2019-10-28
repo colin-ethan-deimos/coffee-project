@@ -55,7 +55,7 @@ for(let i = 0;i<document.getElementsByClassName('roast').length;i++){
 searchTerm.addEventListener("input",function () {
     cardArea.innerHTML = '';
     for(let i = 0; i<coffees.length;i++){
-        if(coffees[i].name.toLowerCase().startsWith(searchTerm.value.toLowerCase())){
+        if(coffees[i].name.toLowerCase().startsWith(searchTerm.value.toLowerCase().trim())){
             cardArea.innerHTML += '<div class="card float-left mx-3 mb-2  border-dark-shade" style="width: 40%;">\n' +
                 '                    <div class="card-body bg-soft-white ">\n' +
                 '                        <h4 class="card-title text-center spookyText ">' + coffees[i].name + '</h4>\n' +
