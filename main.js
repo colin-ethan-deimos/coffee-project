@@ -102,8 +102,8 @@ function specifyRoast(buttonClicked){
         }
         else if(buttonClicked === 'all'){
             cardArea.innerHTML += '<div class="card float-left mx-3 mb-2  border-dark-shade" style="width: 40%;">\n' +
-                '                    <div class="card-body bg-soft-white spookyText">\n' +
-                '                        <h4 class="card-title text-center ">' + coffees[x].name + '</h4>\n' +
+                '                    <div class="card-body bg-soft-white">\n' +
+                '                        <h4 class="card-title text-center spookyText">' + coffees[x].name + '</h4>\n' +
                 '                        <h6 class="card-subtitle mb-2 text-muted text-center">' + coffees[x].roast + '</h6>\n' +
                 '                        <p class="card-text text-center">'+ coffees[x].description +'</p>\n' +
                 '                        <button type="button" class="btn btn-outline-primary mx-auto w-100">Buy Now!</button>\n' +
